@@ -11,8 +11,8 @@ import java.text.SimpleDateFormat;
 public class WindowExample extends JFrame{
 	static Image img;
 	JButton buttonHappy, buttonSad, buttonOK, buttonNOT;
-    JPanel areaPanel, topPanel, leftPanel;
-    JLayeredPane bottomPanel; 
+	JPanel areaPanel, topPanel, leftPanel;
+	JLayeredPane bottomPanel; 
 
 	public static void main(String[] args){
 		WindowExample w = new WindowExample();
