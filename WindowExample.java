@@ -26,7 +26,7 @@ public class WindowExample extends JFrame {
         areaPanel.setLayout(new BorderLayout());
 
         topPanel = new JPanel();
-        JLabel labelTop = new JLabel("You are a CS376 rockstar! Today:");
+        //JLabel labelTop = new JLabel("You are a CS376 rockstar! Today:");
 
         // 1. left panel creation here
 
@@ -111,8 +111,16 @@ leftPanel.add(buttonNOT);
     }
 
     // 14. addTime method implementation
+    private String addTime(){
+  String date = new SimpleDateFormat("yyyy-MM-dd:hh:mm:ss zzz yyyy").format(Calendar.getInstance().getTime());
+  return date;
+}
 
     // 15. imgSignature method implementation
+    private String imgSignature(ImageIcon img){
+  int hash = System.identityHashCode(img);
+  return String.valueOf(hash);
+}
 
 }
 
