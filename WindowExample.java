@@ -41,6 +41,15 @@ public class WindowExample extends JFrame {
 buttonSad = new JButton(new SadAction());
         // 4. happy and sad button change image
 
+
+buttonOK = new JButton("OK");
+buttonNOT = new JButton("Not OK");
+
+
+
+
+
+
         // 5. happy sad images creation here
         ImageIcon imgHappy = new ImageIcon("images/smiley.png");
         JLabel imgLabelHappy = new JLabel(imgHappy);
@@ -53,6 +62,21 @@ buttonSad = new JButton(new SadAction());
         scrollPaneSad.setBounds(10, 50, imgSad.getIconWidth() + 10, imgSad.getIconHeight() + 10);
 
         // 6. OK and NOT button listeners to change images
+        
+buttonNOT.addActionListener(new ActionListener() {
+  @Override
+  public void actionPerformed(ActionEvent ae) {
+    scrollPaneSad.setVisible(false);
+    scrollPaneHappy.setVisible(true);
+  }
+});
+buttonOK.addActionListener(new ActionListener() {
+  @Override
+  public void actionPerformed(ActionEvent ae) {
+    scrollPaneHappy.setVisible(false);
+    scrollPaneSad.setVisible(true);
+  }
+});
 
         // 7. labels with image signature
         JLabel labelBottom = new JLabel("Image Signature ");
@@ -67,6 +91,8 @@ buttonSad = new JButton(new SadAction());
 leftPanel.add(buttonSad);
 
         // 10. add buttons OK and NOT to left panel
+        leftPanel.add(buttonOK);
+leftPanel.add(buttonNOT);
 
         // 11. add left panel to frame
         areaPanel.add(BorderLayout.LINE_START,leftPanel);
