@@ -26,7 +26,7 @@ public class WindowExample extends JFrame {
         areaPanel.setLayout(new BorderLayout());
 
         topPanel = new JPanel();
-        //JLabel labelTop = new JLabel("You are a CS376 rockstar! Today:");
+        JLabel labelTop = new JLabel("You are a CS376 rockstar! Today:");
 
         // 1. left panel creation here
 
